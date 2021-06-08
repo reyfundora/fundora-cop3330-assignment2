@@ -1,21 +1,9 @@
 package ex24;
 
 import java.util.Arrays;
-import java.util.Scanner;
-
 
 class Anagram {
     static String first, second, output = "The two words are not anagrams.";
-
-    static void user_input() {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter two strings and I'll tell you if they are anagrams!\n" +
-                "Enter the first string: ");
-        Anagram.first = input.nextLine();
-        System.out.print("Enter the second string: ");
-        Anagram.second = input.nextLine();
-    }
 
     static boolean isSameLength() {
         int length_first = first.length();
