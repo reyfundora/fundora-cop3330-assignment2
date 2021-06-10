@@ -1,9 +1,9 @@
 package ex25;
 
-import static ex25.ex25_main.password;
-
 public class Password {
-    static boolean very_weak() {
+    String password;
+
+    public boolean very_weak() {
         boolean only_num = false;
         int length = password.length();
 
@@ -17,15 +17,21 @@ public class Password {
         return length < 8 && only_num;
     }
 
-    static boolean weak() {
+    public boolean weak() {
         return false;
     }
 
-    static boolean strong() {
+    public boolean strong() {
         return false;
     }
 
-    static boolean very_strong() {
+    public boolean very_strong() {
         return false;
     }
+
+    public boolean passwordValidator() {
+        return false;
+    }
+
 }
+
