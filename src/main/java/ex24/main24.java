@@ -7,7 +7,7 @@ package ex24;
 
 import java.util.Scanner;
 
-public class main {
+public class main24 {
     static void user_input() {
         Scanner input = new Scanner(System.in);
 

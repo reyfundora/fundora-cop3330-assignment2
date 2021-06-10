@@ -7,13 +7,19 @@ package ex25;
 
 import java.util.Scanner;
 
-public class main {
-    static String password;
+public class main25 {
+    static String password, output;
+    static int pass_length;
+
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter your password: ");
-        password = input.nextLine();
 
-        //Password.passwordValidator();
+        System.out.print("Enter your password: ");
+        password = input.nextLine();
+        pass_length = password.length();
+
+        Password.passwordValidator();
+
+        System.out.println(output);
     }
 }
