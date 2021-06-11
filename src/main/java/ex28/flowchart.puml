@@ -3,12 +3,12 @@
 
 autonumber
 
-Input_Loop --> Try_Catch: Checks to see if input is a number.
-Try_Catch --> User_Input: Saves input into double array.
-User_Input --> Input_Loop: Loops until fifth time.
+Input_Loop --> User_Input: Try/Catch if input is a number.
+User_Input --> Input_Loop: Saves input into double array.
+Input_Loop --> Input_Loop: Loop five times.
 
 
-Input_Loop -> Output_Loop: Adds user_input[ ] to output variable for total.
-Output_Loop -> Answer: Prints out total on to console.
+Input_Loop -> Output: Output for loop adds array values for total.
+Output -> Output: Prints out total onto console.
 
 @enduml
