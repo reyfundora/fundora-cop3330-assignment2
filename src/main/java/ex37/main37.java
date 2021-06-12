@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Rey Fundora
+ */
+
 package ex37;
 
 import java.util.Scanner;
@@ -21,27 +26,17 @@ public class main37 {
                 spl_length = Integer.parseInt(special_in);
                 num_length = Integer.parseInt(num_in);
 
-       /*         if (total_length < spl_length + num_length) {
-                    System.out.println("""
-                            
-                            INVALID INPUT
-                            At least half of the password has to be letters.
-                            Make sure the requested amount of numbers and special characters
-                            does not exceed half of the total required length. Try again.
-                            """); continue;
-                }*/
-
                 Password.generate();
-                System.out.println("\n");
+                System.out.print("\n");
                 break;
             }
             catch (Exception e) {
-                System.out.println("""
+               System.out.println("""
                         
-                        INVALID INPUT
-                        Only enter whole numbers when prompted. Try again.
-                        """);
-            }
+                 INVALID INPUT
+                 Only enter whole numbers when prompted. Try again.
+                 """);
+           }
         }
     }
 }

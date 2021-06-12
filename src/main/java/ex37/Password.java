@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Rey Fundora
+ */
+
 package ex37;
 
 import java.util.ArrayList;
@@ -31,12 +36,18 @@ public class Password {
         spl_list.remove("\"");
 
         int abc_max = 25, abc_min = 0, num_max = 9, num_min= 0, spl_max = 19, spl_min= 0;
-        int total_max = min_length - 1, total_min = 0;
+
+        while (min_length - (num_length + spl_length) <= num_length + spl_length) {
+            int random_abc = (int) Math.floor(Math.random() * (abc_max - abc_min + 1) + abc_min);
+            pass_list.add(abc_list.get(random_abc));
+            min_length++;
+        }
 
         for (int i = 0; i < min_length - (num_length + spl_length); i++) {
             int random_abc = (int) Math.floor(Math.random() * (abc_max - abc_min + 1) + abc_min);
             pass_list.add(abc_list.get(random_abc));
         }
+
         for (int i = 0; i < num_length; i++) {
             int random_num = (int) Math.floor(Math.random() * (num_max - num_min + 1) + num_min);
             pass_list.add(num_list.get(random_num));
@@ -47,11 +58,15 @@ public class Password {
         }
 
         System.out.print("Your password is ");
-        for (int i = 0; i < min_length; i++) {
+
+        int counter = pass_list.size();
+        int total_max = pass_list.size() - 1, total_min = 0;
+
+        for (int i = 0; i < counter; i++) {
             int random = (int) Math.floor(Math.random() * (total_max - total_min + 1) + total_min);
             System.out.print(pass_list.get(random));
             pass_list.remove(random);
-            total_max--;
+            total_max = total_max - 1;
         }
     }
 }
