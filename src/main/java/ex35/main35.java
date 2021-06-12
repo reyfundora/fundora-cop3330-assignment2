@@ -5,15 +5,19 @@
 
 package ex35;
 
+
 import java.util.Scanner;
 
-public class ex35 {
+public class main35 {
     static String name, output;
     static int input_num;
+    static String[] roster = new String[1000];
 
-    static void array_method() {
-        String[] roster = new String[input_num];
-        for (int i = 0; i < input_num; i++);
+    static void math() {
+        int min = 0, max = input_num - 1;
+        int random_num = (int)Math.floor(Math.random() * (max - min + 1) + min);
+
+        output = "The winner is... " + roster[random_num] + ".";
     }
 
     public static void main (String[] args) {
@@ -23,8 +27,9 @@ public class ex35 {
             System.out.print("Enter a name: ");
             name = input.nextLine();
             input_num++;
+            roster[input_num - 1] = name;
 
-            if (!name.equals("")) array_method();
+            if (!name.equals("")) math();
             else {
                 System.out.println(output);
                 break;
