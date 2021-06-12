@@ -7,9 +7,9 @@ package ex26;
 
 import java.util.Scanner;
 
-public class main26 {
+public class   main26 {
     static String balance_in, rate_in, payment_in;
-    static double output;
+    static String output;
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
 

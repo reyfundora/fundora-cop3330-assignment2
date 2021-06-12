@@ -5,20 +5,19 @@
 
 package ex26;
 
+import java.text.DecimalFormat;
+
 public class PaymentCalculator {
 
     public static void calculateMonthsUntilPaidOff() {
-        double balance = Double.parseDouble(main26.balance_in);
-        double rate = Double.parseDouble(main26.rate_in) / 100;
-        double payment = Double.parseDouble(main26.payment_in);
+        double b = Double.parseDouble(main26.balance_in);
+        double rate = Double.parseDouble(main26.rate_in);
+        double p = Double.parseDouble(main26.payment_in);
 
-        double i = rate / 365;
+        double i = (rate / 100) / 365;
+        double n = (Math.log(1 + b/p * (1 - Math.pow(1 + i, 30))) / Math.log(1 + i) / -30) + 1;
 
-        double n = (-(1/30) * Math.log10(1 + balance / payment) * (1 - Math.pow(1 + i, 30))) / Math.log10(1 + i) ;
-
-
-        main26.output = n;
-
+        DecimalFormat df = new DecimalFormat("0");
+        main26.output = "It will take you " + df.format(n) + " months to pay off this card.";
     }
 }
-
