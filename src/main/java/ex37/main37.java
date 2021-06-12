@@ -1,14 +1,12 @@
 package ex37;
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main37 {
     static int length, special, num;
     static String output;
-
-    static void generate() {
-
-    }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -26,7 +24,7 @@ public class main37 {
                 special = Integer.parseInt(special_in);
                 num = Integer.parseInt(num_in);
 
-                generate();
+                Password.generate();
                 System.out.println(output);
 
                 break;
