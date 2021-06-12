@@ -1,12 +1,9 @@
 package ex37;
 
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main37 {
-    static int length, special, num;
-    static String output;
+    static int min_length, spl_length, num_length;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -20,19 +17,31 @@ public class main37 {
                 System.out.print("How many numbers? ");
                 String num_in = input.next();
 
-                length = Integer.parseInt(length_in);
-                special = Integer.parseInt(special_in);
-                num = Integer.parseInt(num_in);
+                min_length = Integer.parseInt(length_in);
+                spl_length = Integer.parseInt(special_in);
+                num_length = Integer.parseInt(num_in);
+
+       /*         if (total_length < spl_length + num_length) {
+                    System.out.println("""
+                            
+                            INVALID INPUT
+                            At least half of the password has to be letters.
+                            Make sure the requested amount of numbers and special characters
+                            does not exceed half of the total required length. Try again.
+                            """); continue;
+                }*/
 
                 Password.generate();
-                System.out.println(output);
-
+                System.out.println("\n");
                 break;
             }
             catch (Exception e) {
-                System.out.println("Invalid input. Only enter numbers when prompted. Try again.\n");
+                System.out.println("""
+                        
+                        INVALID INPUT
+                        Only enter whole numbers when prompted. Try again.
+                        """);
             }
         }
     }
 }
-
