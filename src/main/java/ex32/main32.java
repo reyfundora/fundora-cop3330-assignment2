@@ -24,7 +24,8 @@ public class main32 {
                 if (0 < level_num && level_num < 4) Difficulty.start_game();
                 else if (level_num > 3) throw new Exception();
             } catch (Exception e) {
-                System.out.print("Invalid input. For difficulty, only enter 1, 2, or 3. Try again.");
+                String error_output = "Invalid input. For difficulty, only enter 1, 2, or 3. Try again.";
+                System.out.println(error_output);
             }
 
             while(true) {

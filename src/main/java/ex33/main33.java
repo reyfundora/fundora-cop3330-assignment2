@@ -26,7 +26,7 @@ public class main33 {
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("What's your questio n? ");
+        System.out.println("What's your question? ");
         String question = input.nextLine();
 
         array_method();
