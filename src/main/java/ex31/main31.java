@@ -10,15 +10,16 @@ import java.util.Scanner;
 public class main31 {
     static String output;
     static double age, rate;
+    static String age_in, rate_in;
 
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
 
         while (true) {
             System.out.print("What is your age? ");
-            String age_in = input.next();
+            age_in = input.next();
             System.out.print("What is your resting heart rate (in bpm)? ");
-            String rate_in = input.next();
+            rate_in = input.next();
 
             try {
                 age = Double.parseDouble(age_in);
@@ -26,7 +27,8 @@ public class main31 {
                 break;
             }
             catch (Exception e) {
-                System.out.println("Invalid input. Only enter numbers for both prompts. Try again.\n");
+                output = "Invalid input. Only enter numbers for both prompts. Try again.\n";
+                System.out.println(output);
             }
         }
 
