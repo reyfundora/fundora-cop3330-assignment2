@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static ex26.main26.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 
 public class main_test {
     @Test

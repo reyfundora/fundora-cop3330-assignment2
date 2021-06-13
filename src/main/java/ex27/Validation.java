@@ -25,7 +25,7 @@ public class Validation {
                 if (Character.isLetter(first_name.charAt(i))) no_num++;
                 if (no_num == first_length) return true;
             }
-            error1 = "Please only input letters for name.\n";
+            error1 = "Please only input letters for first name.\n";
         }
         if (first_length < 2) {
             error1 = "The first name must be at least 2 characters long.\n";
@@ -44,7 +44,7 @@ public class Validation {
                 if (Character.isLetter(last_name.charAt(i))) no_num++;
                 if (no_num == second_length) return true;
             }
-            error2 = "Please only input letters for name.\n";
+            error2 = "Please only input letters for last name.\n";
         }
         if (second_length < 2) {
             error2 = "The last name must be at least 2 characters long.\n";
