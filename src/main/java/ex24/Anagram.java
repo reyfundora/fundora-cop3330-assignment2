@@ -3,7 +3,6 @@
  *  Copyright 2021 Rey Fundora
  */
 
-
 package ex24;
 
 import java.util.Arrays;
