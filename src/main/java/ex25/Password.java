@@ -47,9 +47,14 @@ public class Password {
     }
 
     static boolean strong() {
+        int num_counter = 0;
+        int abc_counter = 0;
         if (pass_length >= 8) {
-            for (int i = 0; i < pass_length; i++)
-                if (Character.isDigit(password.charAt(i))) return true;
+            for (int i = 0; i < pass_length; i++) {
+                if (Character.isDigit(password.charAt(i))) num_counter++;
+                if (Character.isLetter(password.charAt(i))) abc_counter++;
+                if (num_counter > 0 && abc_counter > 0) return true;
+            }
         }
 
         return false;

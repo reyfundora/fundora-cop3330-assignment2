@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class main_test {
     @Test
-    public void is_User_Input_Occurring1() {
+    void is_User_Input_Occurring1() {
         // given
         Anagram.first = "test";
         Anagram.second = "test";
