@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class main28 {
     static double[] user_input = new double[5];
+
     static void user_input() {
         Scanner input = new Scanner(System.in);
 
