@@ -3,25 +3,22 @@ package ex38;
 import java.util.Scanner;
 
 public class main38 {
+    static String numbers_in;
+    static String[] numbers_in_array = new String[1000];
     static double[] numbers = new double[1000];
     static double[] numbers_even = new double[1000];
-    static String numbers_in;
+
     static int counter = 0, even_counter = 0;
 
-    static void counter() {
-        for (int i = 0; i < numbers_in.length(); i++) {
-            if(Character.isWhitespace(numbers_in.charAt(i))) counter++;
-        }
-
-        numbers_in = numbers_in.replaceAll(" ", "");
-
-        for (int i = 0; i < counter + 1; i ++) {
-            numbers[i] = Character.getNumericValue(numbers_in.charAt(i));
-        }
-    }
-
     static void filterEvenNumbers() {
-        even_counter = 0;
+        numbers_in_array = numbers_in.split(" ");
+
+        for (int i = 0; i < numbers_in.length(); i++)
+            if (Character.isWhitespace(numbers_in.charAt(i))) counter++;
+
+        for (int i = 0; i < numbers_in_array.length; i++)
+            numbers[i] = Double.parseDouble(numbers_in_array[i]);
+
         for (int i = 0; i < counter + 1; i ++) {
             if (numbers[i] % 2 == 0) {
                 even_counter++;
@@ -43,7 +40,6 @@ public class main38 {
         System.out.print("Enter a list of numbers, separated by spaces: ");
         numbers_in = input.nextLine();
 
-        counter();
         filterEvenNumbers();
         output();
     }
