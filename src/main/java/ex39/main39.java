@@ -9,9 +9,9 @@ public class main39 {
             System.out.print(row1 + row2);
 
         for (int i = 0; i < 6; i++) {
-            System.out.print( maplist.get(i).get(1));
+            System.out.print(maplist.get(i).get(1));
             System.out.print(maplist.get(i).get(2));
-            System.out.print( maplist.get(i).get(3));
+            System.out.print(maplist.get(i).get(3));
         }
     }
 

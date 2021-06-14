@@ -2,12 +2,45 @@ package ex39;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static ex39.HashMaps.*;
 
 public class main_test {
-    void are_even_numbers_being_filtered() {
+    @Test
+    void is_map_getting_saved_to_list() {
         //given
-        //when
-        //then
+        HashMaps.map_assign();
 
+        //when
+        String expect = "Jake Jacobson       |";
+        String actual = (String) maplist.get(1).get(1);
+
+        //then
+        assertEquals(expect, actual);
+
+    }
+    @Test
+    void is_map_getting_saved_to_list2() {
+        //given
+        HashMaps.map_assign();
+
+        //when
+        String expect = " District Manager  | ";
+        String actual = (String) maplist.get(3).get(2);
+
+        //then
+        assertEquals(expect, actual);
+
+    }
+    @Test
+    void is_map_getting_saved_to_list3() {
+        //given
+        HashMaps.map_assign();
+
+        //when
+        String expect = "2016-12-31\n";
+        String actual = (String) maplist.get(2).get(3);
+
+        //then
+        assertEquals(expect, actual);
     }
 }
