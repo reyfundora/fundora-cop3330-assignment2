@@ -1,23 +1,19 @@
 package ex40;
 
+import java.util.Scanner;
+
 import static ex40.HashMaps.maplist;
 
 public class main40 {
-
-    static void output() {
-        String row1 = "Name                | Position          | Separation Date\n",
-                row2 = "--------------------|-------------------|----------------\n";
-        System.out.print(row1 + row2);
-
-        for (int i = 0; i < 6; i++) {
-            System.out.print(maplist.get(i).get(1));
-            System.out.print(maplist.get(i).get(2));
-            System.out.print(maplist.get(i).get(3));
-        }
-    }
+    static String search;
 
     public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a search string: ");
+        search = input.nextLine();
+
         HashMaps.map_assign();
-        output();
+        Search.Search_Function();
     }
 }
