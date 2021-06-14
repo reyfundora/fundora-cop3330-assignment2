@@ -6,6 +6,7 @@ import static ex40.main40.search;
 
 public class Search {
 
+    static Integer[] counts = new Integer[6];
     static void Search_Function() {
         int Jackson= 0, Jacobson = 0, Johnson = 0, Michaelson = 0, Weber = 0, Xiong = 0;
 
@@ -17,7 +18,7 @@ public class Search {
         names[4] = "Sally" + "Weber";
         names[5] = "Tou" + "Xiong";
 
-        int a = 0, b =0, c = 0, d = 0, e = 0, f =0;
+        int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0;
         for (int i = 0; i < 18; i++) {
 
             while (a < search.length() && i < names[0].length()) {
@@ -59,7 +60,6 @@ public class Search {
 
         }
 
-        Integer[] counts = new Integer[6];
         counts[0] = Jackson;
         counts[1] = Jacobson;
         counts[2] = Johnson;
